@@ -131,32 +131,4 @@ document.addEventListener('DOMContentLoaded', function() {
         const progress = (scrolled / scrollWidth) * 100;
         progressBar.style.width = `${progress}%`;
     });
-
-    // Cart functionality
-    const cartItems = document.querySelectorAll('.cart li');
-    const removeButtons = document.querySelectorAll('.remove-item');
-    const cartTotal = document.querySelector('.cart-total');
-    const checkoutBtn = document.querySelector('.checkout-btn');
-
-    // Remove item from cart
-    removeButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const item = this.parentElement;
-            item.remove();
-            updateCartTotal();
-        });
-    });
-
-    // Update cart total
-    function updateCartTotal() {
-        let total = 0;
-        cartItems.forEach(item => {
-            const price = parseFloat(item.querySelector('.price').textContent.replace('$', ''));
-            total += price;
-        });
-        cartTotal.textContent = `$${total.toFixed(2)}`;
-    }
-
-    // Add animation for cart items
-    const style = document.createElement('style');
-    style.textContent = `
+});

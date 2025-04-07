@@ -646,43 +646,6 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Cart styles */
-.cart {
-    display: none;
-}
-
-.cart h2 {
-    display: none;
-}
-
-#cart-items {
-    display: none;
-}
-
-.empty-cart-message {
-    display: none;
-}
-
-.cart-item {
-    display: none;
-}
-
-.cart-item img {
-    display: none;
-}
-
-.cart-item span {
-    display: none;
-}
-
-.add-to-cart {
-    display: none;
-}
-
-.notification {
-    display: none;
-}
-
 /* Categories Section */
 .categories-section {
     margin: 40px 0;
@@ -1090,4 +1053,18 @@ footer {
     .profile-header h2 {
         font-size: 1.3em;
     }
+}
+
+/* Remove cart styles */
+.cart,
+.cart h2,
+#cart-items,
+.empty-cart-message,
+.cart-item,
+.add-to-cart,
+.cart-item-link,
+.cart-total,
+.checkout-btn,
+.cart-notification {
+    display: none;
 }
