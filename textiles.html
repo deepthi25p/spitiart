@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textiles - SpitiArt</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Textiles</h1>
+        <div class="top-bar">
+            <a href="index.html" class="home-link">SpitiArt</a>
+            <input type="text" id="searchInput" placeholder="Search textiles..." class="search-bar">
+        </div>
+
+        <div class="scroll-container">
+            <img src="textile1.jpg" alt="Featured Textile">
+            <img src="textile2.jpg" alt="Featured Textile">
+            <img src="textile3.jpg" alt="Featured Textile">
+            <img src="textile4.jpg" alt="Featured Textile">
+            <img src="textile5.jpg" alt="Featured Textile">
+        </div>
+
+        <div class="products" id="products">
+            <div class="card">
+                <img src="textile1.jpg" alt="Handwoven Shawl">
+                <h3>Handwoven Shawl</h3>
+                <p>Traditional handwoven shawl with intricate patterns.</p>
+                <a href="#" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(1)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="textile2.jpg" alt="Embroidered Scarf">
+                <h3>Embroidered Scarf</h3>
+                <p>Beautiful scarf with traditional embroidery work.</p>
+                <a href="#" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(2)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="textile3.jpg" alt="Block Print Fabric">
+                <h3>Block Print Fabric</h3>
+                <p>Hand-block printed fabric with natural dyes.</p>
+                <a href="#" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(3)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="textile4.jpg" alt="Woven Cushion Cover">
+                <h3>Woven Cushion Cover</h3>
+                <p>Handwoven cushion cover with geometric patterns.</p>
+                <a href="#" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(4)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="textile5.jpg" alt="Traditional Saree">
+                <h3>Traditional Saree</h3>
+                <p>Handcrafted saree with traditional motifs.</p>
+                <a href="#" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(5)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="textile6.jpg" alt="Handmade Quilt">
+                <h3>Handmade Quilt</h3>
+                <p>Traditional quilt with patchwork design.</p>
+                <a href="#" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(6)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="textile7.jpg" alt="Woven Table Runner">
+                <h3>Woven Table Runner</h3>
+                <p>Handwoven table runner with traditional patterns.</p>
+                <a href="#" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(7)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="textile8.jpg" alt="Embroidered Wall Hanging">
+                <h3>Embroidered Wall Hanging</h3>
+                <p>Traditional wall hanging with intricate embroidery.</p>
+                <a href="#" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(8)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="textile9.jpg" alt="Handwoven Rug">
+                <h3>Handwoven Rug</h3>
+                <p>Traditional rug with geometric patterns.</p>
+                <a href="#" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(9)">Add to Cart</button>
+            </div>
+        </div>
+
+        
+        <div class="cart">
+            <ul id="cartItems"></ul>
+            <p id="emptyCartMessage">Your cart is empty.</p>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: "Handwoven Shawl", image: "textile1.jpg" },
+            { id: 2, name: "Embroidered Scarf", image: "textile2.jpg" },
+            { id: 3, name: "Block Print Fabric", image: "textile3.jpg" },
+            { id: 4, name: "Woven Cushion Cover", image: "textile4.jpg" },
+            { id: 5, name: "Traditional Saree", image: "textile5.jpg" },
+            { id: 6, name: "Handmade Quilt", image: "textile6.jpg" },
+            { id: 7, name: "Woven Table Runner", image: "textile7.jpg" },
+            { id: 8, name: "Embroidered Wall Hanging", image: "textile8.jpg" },
+            { id: 9, name: "Handwoven Rug", image: "textile9.jpg" }
+        ];
+
+        const cart = [];
+        const searchInput = document.getElementById("searchInput");
+
+        // Search functionality
+        searchInput.addEventListener("input", function() {
+            const searchValue = searchInput.value.toLowerCase();
+            const cards = document.querySelectorAll(".card");
+            
+            cards.forEach(card => {
+                const title = card.querySelector("h3").textContent.toLowerCase();
+                const description = card.querySelector("p").textContent.toLowerCase();
+                
+                if (title.includes(searchValue) || description.includes(searchValue)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+
+        // Cart functionality
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!cart.some(item => item.id === productId)) {
+                cart.push(product);
+                updateCart();
+                showNotification(`${product.name} added to cart!`);
+            } else {
+                showNotification("Item already in cart!");
+            }
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById("cartItems");
+            const emptyCartMessage = document.getElementById("emptyCartMessage");
+            cartItems.innerHTML = "";
+            
+            if (cart.length === 0) {
+                emptyCartMessage.style.display = "block";
+            } else {
+                emptyCartMessage.style.display = "none";
+                cart.forEach((item, index) => {
+                    const cartItem = document.createElement("li");
+                    cartItem.innerHTML = `
+                        <div class="cart-item">
+                            <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+                            <span>${item.name}</span>
+                            <button onclick="removeFromCart(${index})">Remove</button>
+                        </div>
+                    `;
+                    cartItems.appendChild(cartItem);
+                });
+            }
+            document.getElementById("cartCount").innerText = cart.length;
+        }
+
+        function removeFromCart(index) {
+            const removedItem = cart[index];
+            cart.splice(index, 1);
+            updateCart();
+            showNotification(`${removedItem.name} removed from cart`);
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement("div");
+            notification.className = "notification";
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Initialize cart
+        updateCart();
+    </script>
+
+    <style>
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .cart-item img {
+            margin-right: 10px;
+        }
+
+        .cart-item button {
+            margin-left: auto;
+        }
+    </style>
+</body>
+</html> 

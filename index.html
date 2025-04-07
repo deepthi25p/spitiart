@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpitiArt - Handmade Products</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="search.js" defer></script>
+    <script src="script.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">SpitiArt</h1>
+                <p class="subtitle">- Crafted with hands.. Made with love</p>
+            </div>
+        </header>
+
+        <div id="profile-section" style="display: none;">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <h2>Welcome, <span id="user-name"></span>!</h2>
+                    <button id="logout-btn" class="logout-btn">Logout</button>
+                </div>
+                <div class="profile-info">
+                    <p><strong>Email:</strong> <span id="user-email"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-bar">
+            <a href="index.html" class="home-link">SpitiArt</a>
+            <input type="text" id="searchInput" placeholder="Search products..." class="search-bar">
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#categories" class="nav-link">Shop</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="login.html" class="nav-link"><i class="fas fa-user"></i> Login</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section id="home" class="welcome-section">
+            <h2>Welcome to SpitiArt</h2>
+            <p>Discover unique handmade goods crafted with passion and skill. Each item at SpitiArt tells a story of
+                tradition and creativity. By supporting us, you are empowering artisans and bringing authentic
+                craftsmanship to your doorstep.</p>
+        </section>
+        <div class="scroll-container">
+            <div class="scroll-progress">
+                <div class="scroll-progress-bar"></div>
+            </div>
+            <img src="scarf.jpg" alt="Featured Product">
+            <img src="necklaceset.webp" alt="Featured Product">
+            <img src="mug.jpeg" alt="Featured Product">
+            <img src="clothing3.webp" alt="Featured Product">
+            <img src="art3.webp" alt="Featured Product">
+            <img src="toy1.webp" alt="Featured Product">
+            <img src="mirror.jpg" alt="Featured Product">
+            <img src="personal1.webp" alt="Featured Product">
+            <img src="wallhanging.jpg" alt="Featured Product">
+            <img src="painting.jpg" alt="Featured Product">
+            <img src="acc1.jpg" alt="Featured Product">
+        </div>
+
+        <section id="categories" class="categories-section">
+            <h2>Shop by Category</h2>
+            <div class="products">
+                <div class="card">
+                    <a href="jewelry.html">
+                        <img src="jhumkas.webp" alt="Jewelry">
+                        <h3>Jewelry</h3>
+                        <p>Handcrafted necklaces, rings, and accessories</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="home-decor.html">
+                        <img src="wallhanging.jpg" alt="Home Decor">
+                        <h3>Home Decor</h3>
+                        <p>Beautiful pieces to enhance your living space</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="art.html">
+                        <img src="painting.jpg" alt="Art">
+                        <h3>Art</h3>
+                        <p>Original paintings and artistic creations</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="accessories.html">
+                        <img src="acc1.jpg" alt="Accessories">
+                        <h3>Accessories</h3>
+                        <p>Handbags, scarves, and more</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="kitchen.html">
+                        <img src="mug.jpeg" alt="Kitchen">
+                        <h3>Kitchen & Dining</h3>
+                        <p>Handcrafted kitchenware and dining items</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="personal.html">
+                        <img src="personal1.webp" alt="Personal Care">
+                        <h3>Personal Care</h3>
+                        <p>Handmade personal care items</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="clothing.html">
+                        <img src="clothing8.webp" alt="Textiles">
+                        <h3>Clothing</h3>
+                        <p>Handwoven fabrics and traditional textiles</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="stationery.html">
+                        <img src="stationery5.webp" alt="Stationery">
+                        <h3>Stationery</h3>
+                        <p>Handmade paper and writing accessories</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="toys.html">
+                        <img src="toy1.webp" alt="Toys">
+                        <h3>Toys & Games</h3>
+                        <p>Handcrafted toys and traditional games</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <p>Welcome to your one-stop destination for authentic handmade products! We curate and showcase the finest 
+                handcrafted goods from trusted websites and artisans across India. Our platform brings together traditional 
+                crafts, modern designs, and unique creations from multiple verified sellers, making it easy for you to 
+                discover and shop quality handmade items all in one place.</p>
+        </section>
+
+        <section id="feedback" class="feedback-section">
+            <div class="feedback-container">
+                <div class="feedback-header">
+                    <h2>Feedback</h2>
+                </div>
+                <form id="feedback-form" class="feedback-form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <i class="fas fa-comment"></i>
+                            <textarea id="message" placeholder="Your message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group rating-group">
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1"><i class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Submit</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+
+
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 SpitiArt. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        
+        // Search functionality
+        searchInput.addEventListener("input", function() {
+            const searchValue = searchInput.value.toLowerCase();
+            const cards = document.querySelectorAll(".card");
+            
+            cards.forEach(card => {
+                const title = card.querySelector("h3").textContent.toLowerCase();
+                const description = card.querySelector("p").textContent.toLowerCase();
+                
+                if (title.includes(searchValue) || description.includes(searchValue)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById("feedback-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            alert("Thank you for your feedback!");
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

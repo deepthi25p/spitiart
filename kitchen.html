@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen - SpitiArt</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Kitchen</h1>
+        <div class="top-bar">
+            <a href="index.html" class="home-link">SpitiArt</a>
+            <input type="text" id="searchInput" placeholder="Search kitchen items..." class="search-bar">
+        </div>
+
+        <div class="scroll-container">
+            <img src="kitchen4.webp" alt="Featured Kitchen Item">
+            <img src="kitchen5.webp" alt="Featured Kitchen Item">
+            <img src="kitchen8.webp" alt="Featured Kitchen Item">
+            <img src="kitchen6.jpg" alt="Featured Kitchen Item">
+        </div>
+
+        <div class="products" id="products">
+            <div class="card">
+                <img src="kitchen1.jpg" alt="Wooden Utensil Set">
+                <h3>Wooden Utensil Set</h3>
+                <p>Handcrafted wooden utensils with smooth finish.</p>
+                <a href="https://www.amazon.in/Wooden-Kitchen-Utensil-Pieces-Cooking/dp/B0DXD4CM6M?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=AS5FD9KPIFTQG" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="kitchen2.webp" alt="Ceramic Bowl">
+                <h3>Ceramic Bowl</h3>
+                <p>Hand-thrown ceramic bowl with unique glaze.</p>
+                <a href="https://madarks.com/Handcrafted-Floral-Ceramic-Serving-Bowl--7-inch-Diameter-/catalogue/wVBJ-x58/YI3q1w3K" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="kitchen3.webp" alt="Bamboo Cutting Board">
+                <h3>Bamboo Cutting Board</h3>
+                <p>Handcrafted bamboo cutting board with smooth surface.</p>
+                <a href="https://www.etsy.com/in-en/listing/1391986076/personalized-cutting-board-extra-large?gpla=1&gao=1&" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="kitchen4.webp" alt="Copper Pot">
+                <h3>Ceramic Pickle Jar</h3>
+                <p>Handcrafted Ceramic Pickle Jar with traditional design.</p>
+                <a href="https://www.amazon.in/Handmade-Ceramic-Pickle-Cookie-Dining/dp/B08MHJH6PD?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=AEKQTHJUZ0UX4" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="kitchen5.webp" alt="Stone Mortar">
+                <h3>Ceramic Serving Bowl</h3>
+                <p>Ceramic Serving Bowl with Lid, Handmade Indian Curd Pot</p>
+                <a href="https://www.etsy.com/in-en/listing/1365984488/ceramic-serving-bowl-with-lid-handmade?gpla=1&gao=1&" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="kitchen6.jpg" alt="Wooden Spice Box">
+                <h3>Wooden Spice Box</h3>
+                <p>Handcrafted wooden spice box with compartments.</p>
+                <a href="https://www.amazon.in/LUXE-EEM-Kitchen-Decorative-Organizer-Containers-Wooden/dp/B0CYH7X29W?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1CBDL3OLYQT6Q" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="mug1.jpg" alt="Ceramic Mug">
+                <h3>Ceramic Mug</h3>
+                <p>Hand-thrown ceramic mug with unique design.</p>
+                <a href="https://unravelindia.com/unravel-india-handcrafted-ceramic-tea-coffee-mug-2-mug.html" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="kitchen7.jpg" alt="Bamboo Utensil Holder">
+                <h3>Bamboo Utensil Holder</h3>
+                <p>Handcrafted bamboo utensil holder with compartments.</p>
+                <a href="https://www.amazon.in/AKWAY-Chammach-Rack-resto-bar-Tableware/dp/B08MD5WZPM?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=AHN7WUDUBYB15" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="kitchen8.webp" alt="Wooden Plate">
+                <h3>Wooden Plate</h3>
+                <p>Handcrafted wooden plate with smooth finish.</p>
+                <a href="https://www.etsy.com/in-en/listing/1111206737/olive-wood-plate-set-serving-plate-set?gpla=1&gao=1&" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        
+        <div class="cart">
+            <ul id="cartItems"></ul>
+            <p id="emptyCartMessage">Your cart is empty.</p>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: "Wooden Utensil Set", image: "kitchen1.jpg" },
+            { id: 2, name: "Ceramic Bowl", image: "kitchen2.jpg" },
+            { id: 3, name: "Bamboo Cutting Board", image: "kitchen3.jpg" },
+            { id: 4, name: "Copper Pot", image: "kitchen1.jpg" },
+            { id: 5, name: "Stone Mortar", image: "kitchen2.jpg" },
+            { id: 6, name: "Wooden Spice Box", image: "kitchen3.jpg" },
+            { id: 7, name: "Ceramic Mug", image: "kitchen1.jpg" },
+            { id: 8, name: "Bamboo Utensil Holder", image: "kitchen2.jpg" },
+            { id: 9, name: "Wooden Plate", image: "kitchen3.jpg" }
+        ];
+
+        const cart = [];
+        const searchInput = document.getElementById("searchInput");
+
+        // Search functionality
+        searchInput.addEventListener("input", function() {
+            const searchValue = searchInput.value.toLowerCase();
+            const filteredProducts = products.filter(product => 
+                product.name.toLowerCase().includes(searchValue)
+            );
+            displayProducts(filteredProducts);
+        });
+
+        // Cart functionality
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!cart.some(item => item.id === productId)) {
+                cart.push(product);
+                updateCart();
+            } else {
+                alert("Item already in cart!");
+            }
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById("cartItems");
+            const emptyCartMessage = document.getElementById("emptyCartMessage");
+            cartItems.innerHTML = "";
+            
+            if (cart.length === 0) {
+                emptyCartMessage.style.display = "block";
+            } else {
+                emptyCartMessage.style.display = "none";
+                cart.forEach((item, index) => {
+                    const cartItem = document.createElement("li");
+                    cartItem.innerHTML = `${item.name} <button onclick="removeFromCart(${index})">Remove</button>`;
+                    cartItems.appendChild(cartItem);
+                });
+            }
+            document.getElementById("cartCount").innerText = cart.length;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        // Initialize cart
+        updateCart();
+    </script>
+</body>
+
+</html> 

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing - SpitiArt</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Clothing</h1>
+        <div class="top-bar">
+            <a href="index.html" class="home-link">SpitiArt</a>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for clothing items..." class="search-bar">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+
+        <div class="scroll-container">
+            <img src="clothing6.webp" alt="Featured Clothing">
+            <img src="clothing4.webp" alt="Featured Clothing">
+            <img src="clothing5.webp" alt="Featured Clothing">
+            <img src="clothing7.webp" alt="Featured Clothing">
+            <img src="clothing9.webp" alt="Featured Clothing">
+        </div>
+
+        <div class="products" id="products">
+            <div class="card">
+                <img src="clothing1.webp" alt="Traditional Kurta">
+                <h3>Traditional Kurta</h3>
+                <p>Handcrafted kurta with traditional embroidery.</p>
+                <a href="https://www.myntra.com/kurtas/here%26now/herenow-men-ethnic-motifs-embroidered-chikankari-kurta/24097424/buy" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(1)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="clothing2.webp" alt="Handwoven Shawl">
+                <h3>Handwoven Shawl</h3>
+                <p>Traditional shawl with intricate patterns.</p>
+                <a href="https://www.fabindia.com/natural-wool-blend-hand-woven-shawl-20193472?currencyCode=INR&srsltid=AfmBOoqk9kVvTxkNdAvmOMNk3jYBLVqyV33E1A--22x3cB8q43pbpMpW15A" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(2)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="clothing3.webp" alt="Embroidered Jacket">
+                <h3>Embroidered Jacket</h3>
+                <p>Hand-embroidered jacket with traditional motifs.</p>
+                <a href="https://www.amazon.in/Aarika-Womens-Embroidery-Ethnic-JK-W-AK-501-CREAM-44/dp/B0B2J7V1F7?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=AO8FSIYHZW98W&th=1&psc=1" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(3)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="clothing4.webp" alt="Traditional Saree">
+                <h3>Traditional Saree</h3>
+                <p>Handwoven saree with traditional designs.</p>
+                <a href="https://www.amazon.in/TEEJH-Maroon-Cotton-Tissue-Blouse/dp/B0CC5X91YF?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A2DEQ6PNVG78OY" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(4)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="clothing5.webp" alt="Handmade Scarf">
+                <h3>Handmade Scarf</h3>
+                <p>Traditional scarf with hand embroidery.</p>
+                <a href="http://ajio.com/indie-picks-pashmina-wool-kani-kalamkari--kashmiri-handloom-shawl-with-tassels/p/466617723_white?srsltid=AfmBOooHW0VXSuIXDvBwg0DhYedYsiMa0diC7zy6N-kQqeCbG3qJFiMQ9vQ#gmf" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(5)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="clothing6.webp" alt="Embroidered Blouse">
+                <h3>Embroidered Blouse</h3>
+                <p>Traditional blouse with intricate embroidery.</p>
+                <a href="https://aayuracreation.com/products/khadi-blossom-embroidery-blouse?variant=51025093329214&country=IN&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOooZ31oEeW1C-THs4VLq0lUmrJoN5fESnZ-t7WuoEP7H-cZ9r-J7ZAY" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(6)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="clothing7.webp" alt="Traditional Skirt">
+                <h3>Traditional Skirt</h3>
+                <p>Handcrafted skirt with traditional patterns.</p>
+                <a href="https://www.amazon.in/Royal-Handcrafted-Sequence-Jaipuri-Black-Pink/dp/B07DFTLMPZ?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A7TO7D0JBAHJB&th=1&psc=1" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(7)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="clothing8.webp" alt="Handwoven Dress">
+                <h3>Handwoven Dress</h3>
+                <p>Traditional dress with handwoven fabric.</p>
+                <a href="https://www.ahilaya.com/in/dresses/ahilaya-pushkincottondressoffwht?srsltid=AfmBOoovFNbNlCMi_l6wk_QuyxKeAL_vGSRphYT07UF39ZHxHV3ZjaEjaAs" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(8)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="clothing9.webp" alt="Embroidered Top">
+                <h3>Embroidered Top</h3>
+                <p>Traditional top with hand embroidery.</p>
+                <a href="https://www.myntra.com/tops/all+about+you/all-about-you-maroon-floral-embroidered-longline-top/20637430/buy" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(9)">Add to Cart</button>
+            </div>
+        </div>
+
+        
+        <div class="cart">
+            <ul id="cartItems"></ul>
+            <p id="emptyCartMessage">Your cart is empty.</p>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: "Traditional Kurta", image: "clothing1.jpg" },
+            { id: 2, name: "Handwoven Shawl", image: "clothing2.jpg" },
+            { id: 3, name: "Embroidered Jacket", image: "clothing3.jpg" },
+            { id: 4, name: "Traditional Saree", image: "clothing4.jpg" },
+            { id: 5, name: "Handmade Scarf", image: "clothing5.jpg" },
+            { id: 6, name: "Embroidered Blouse", image: "clothing6.jpg" },
+            { id: 7, name: "Traditional Skirt", image: "clothing7.jpg" },
+            { id: 8, name: "Handwoven Dress", image: "clothing8.jpg" },
+            { id: 9, name: "Embroidered Top", image: "clothing9.jpg" }
+        ];
+
+        const cart = [];
+        const searchInput = document.getElementById("searchInput");
+
+        // Search functionality
+        searchInput.addEventListener("input", function() {
+            const searchValue = searchInput.value.toLowerCase();
+            const cards = document.querySelectorAll(".card");
+            
+            cards.forEach(card => {
+                const title = card.querySelector("h3").textContent.toLowerCase();
+                const description = card.querySelector("p").textContent.toLowerCase();
+                
+                if (title.includes(searchValue) || description.includes(searchValue)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+
+        // Cart functionality
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!cart.some(item => item.id === productId)) {
+                cart.push(product);
+                updateCart();
+                showNotification(`${product.name} added to cart!`);
+            } else {
+                showNotification("Item already in cart!");
+            }
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById("cartItems");
+            const emptyCartMessage = document.getElementById("emptyCartMessage");
+            cartItems.innerHTML = "";
+            
+            if (cart.length === 0) {
+                emptyCartMessage.style.display = "block";
+            } else {
+                emptyCartMessage.style.display = "none";
+                cart.forEach((item, index) => {
+                    const cartItem = document.createElement("li");
+                    cartItem.innerHTML = `
+                        <div class="cart-item">
+                            <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+                            <span>${item.name}</span>
+                            <button onclick="removeFromCart(${index})">Remove</button>
+                        </div>
+                    `;
+                    cartItems.appendChild(cartItem);
+                });
+            }
+            document.getElementById("cartCount").innerText = cart.length;
+        }
+
+        function removeFromCart(index) {
+            const removedItem = cart[index];
+            cart.splice(index, 1);
+            updateCart();
+            showNotification(`${removedItem.name} removed from cart`);
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement("div");
+            notification.className = "notification";
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Initialize cart
+        updateCart();
+    </script>
+
+    <style>
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .cart-item img {
+            margin-right: 10px;
+        }
+
+        .cart-item button {
+            margin-left: auto;
+        }
+    </style>
+</body>
+</html> 

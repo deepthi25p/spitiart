@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toys - SpitiArt</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Toys</h1>
+        <div class="top-bar">
+            <a href="index.html" class="home-link">SpitiArt</a>
+            <input type="text" id="searchInput" placeholder="Search toys..." class="search-bar">
+        </div>
+
+        <div class="scroll-container">
+            <img src="toy5.webp" alt="Featured Toy">
+            <img src="toy6.webp" alt="Featured Toy">
+            <img src="toy9.webp" alt="Featured Toy">
+            <img src="toy8.webp" alt="Featured Toy">
+            <img src="toy4.webp" alt="Featured Toy">
+        </div>
+
+        <div class="products" id="products">
+            <div class="card">
+                <img src="toy1.webp" alt="Wooden Doll">
+                <h3>Wooden Doll</h3>
+                <p>Handcrafted wooden doll with traditional attire.</p>
+                <a href="https://www.flipkart.com/toys-house-wooden-handmade-crafted-red-color-doll-hand-painted-nesting-decoration-gift-stacking-nested-wood-dolls-kids-set-5-red/p/itmf9a5e855976b2?pid=DDHG56YZBYMVH6WT&lid=LSTDDHG56YZBYMVH6WT8ZXZGU&marketplace=FLIPKART&cmpid=content_doll-doll-house_8965229628_gmc" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(1)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="toy2.webp" alt="Bamboo Toy Car">
+                <h3>Bamboo Toy Car</h3>
+                <p>Eco-friendly toy car made from bamboo.</p>
+                <a href="https://www.tradeindia.com/products/wooden-little-jeep-toy-8604327.html" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(2)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="toy3.webp" alt="Handmade Puzzle">
+                <h3>Handmade Puzzle</h3>
+                <p>Traditional wooden puzzle with cultural motifs.</p>
+                <a href="https://www.flipkart.com/desi-karigar-handmade-indian-wood-jigsaw-puzzle-wooden-tangram-kids-travel-game-families-unique-gift-children/p/itmd2541af44addd?pid=PUZG8X6FPHFHGHSA&lid=LSTPUZG8X6FPHFHGHSAN5PRR0&marketplace=FLIPKART&cmpid=content_puzzle_8965229628_gmc" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(3)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="toy4.webp" alt="Wooden Blocks">
+                <h3>Wooden Blocks</h3>
+                <p>Handcrafted wooden building blocks.</p>
+                <a href="https://www.desertcart.in/products/10833900-beka-wooden-blocks-deluxe-set" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(4)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="toy5.webp" alt="Traditional Spinning Top">
+                <h3>Traditional Spinning Top</h3>
+                <p>Handcrafted wooden spinning top.</p>
+                <a href="https://www.flipkart.com/funwood-games-handmade-wooden-spinning-top-kids-pambaram-set-2-pull-play/p/itmb13114a4ffd91?pid=SPLGCQWAHJCZGKPP&lid=LSTSPLGCQWAHJCZGKPPN8JMZ6&marketplace=FLIPKART&cmpid=content_spin-press-launch-toy_8965229628_gmc" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(5)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="toy6.webp" alt="Handmade Puppet">
+                <h3>Handmade Puppet</h3>
+                <p>Traditional hand puppet with cultural designs.</p>
+                <a href="https://www.amazon.in/Rajasthani-Katputli-Traditional-Handcrafted-Colorful/dp/B0DRCSFVYT?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1MKLF8QCGX13" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(6)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="toy8.webp" alt="Wooden Animal Figures">
+                <h3>Wooden Animal Figures</h3>
+                <p>Set of handcrafted wooden animal figures.</p>
+                <a href="https://masilo.in/products/wooden-wild-animals-set-of-12?currency=INR&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=a5db224d3ba2&srsltid=AfmBOoqEO9sZMdK3uRJ_aMr4pslPS29jXod7sueGdjfY0QFSBrWnWyDDEeY" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(7)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="toy7.webp" alt="Traditional Board Game">
+                <h3>Traditional Board Game</h3>
+                <p>Handcrafted traditional board game.</p>
+                <a href="https://www.amazon.in/Ortus-Noughts-Solitaire-Traditional-Challenging/dp/B08XP7W1BV?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=AK2XQ6HGCDVJ6" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(8)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="toy9.webp" alt="Handmade Musical Toy">
+                <h3>Handmade Musical Toy</h3>
+                <p>Traditional musical instrument for children.</p>
+                <a href="https://www.amazon.in/EITHEO-Wooden-Cranked-Collectable-Engraved/dp/B089P1RHTC?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3JKF7A747FJ2A" target="_blank"><button class="btn success">Buy Now</button></a>
+                <button class="add-to-cart" onclick="addToCart(9)">Add to Cart</button>
+            </div>
+        </div>
+
+        
+        <div class="cart">
+            <ul id="cartItems"></ul>
+            <p id="emptyCartMessage">Your cart is empty.</p>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: "Wooden Doll", image: "toy1.jpg" },
+            { id: 2, name: "Bamboo Toy Car", image: "toy2.jpg" },
+            { id: 3, name: "Handmade Puzzle", image: "toy3.jpg" },
+            { id: 4, name: "Wooden Blocks", image: "toy4.jpg" },
+            { id: 5, name: "Traditional Spinning Top", image: "toy5.jpg" },
+            { id: 6, name: "Handmade Puppet", image: "toy6.jpg" },
+            { id: 7, name: "Wooden Animal Figures", image: "toy7.jpg" },
+            { id: 8, name: "Traditional Board Game", image: "toy8.jpg" },
+            { id: 9, name: "Handmade Musical Toy", image: "toy9.jpg" }
+        ];
+
+        const cart = [];
+        const searchInput = document.getElementById("searchInput");
+
+        // Search functionality
+        searchInput.addEventListener("input", function() {
+            const searchValue = searchInput.value.toLowerCase();
+            const cards = document.querySelectorAll(".card");
+            
+            cards.forEach(card => {
+                const title = card.querySelector("h3").textContent.toLowerCase();
+                const description = card.querySelector("p").textContent.toLowerCase();
+                
+                if (title.includes(searchValue) || description.includes(searchValue)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+
+        // Cart functionality
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!cart.some(item => item.id === productId)) {
+                cart.push(product);
+                updateCart();
+                showNotification(`${product.name} added to cart!`);
+            } else {
+                showNotification("Item already in cart!");
+            }
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById("cartItems");
+            const emptyCartMessage = document.getElementById("emptyCartMessage");
+            cartItems.innerHTML = "";
+            
+            if (cart.length === 0) {
+                emptyCartMessage.style.display = "block";
+            } else {
+                emptyCartMessage.style.display = "none";
+                cart.forEach((item, index) => {
+                    const cartItem = document.createElement("li");
+                    cartItem.innerHTML = `
+                        <div class="cart-item">
+                            <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+                            <span>${item.name}</span>
+                            <button onclick="removeFromCart(${index})">Remove</button>
+                        </div>
+                    `;
+                    cartItems.appendChild(cartItem);
+                });
+            }
+            document.getElementById("cartCount").innerText = cart.length;
+        }
+
+        function removeFromCart(index) {
+            const removedItem = cart[index];
+            cart.splice(index, 1);
+            updateCart();
+            showNotification(`${removedItem.name} removed from cart`);
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement("div");
+            notification.className = "notification";
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Initialize cart
+        updateCart();
+    </script>
+
+    <style>
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .cart-item img {
+            margin-right: 10px;
+        }
+
+        .cart-item button {
+            margin-left: auto;
+        }
+    </style>
+</body>
+</html> 
