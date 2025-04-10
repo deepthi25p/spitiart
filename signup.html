@@ -116,7 +116,7 @@
     </div>
 
     <script>
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
+        document.getElementById('signupForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
             const password = document.getElementById('password').value;
@@ -127,19 +127,33 @@
                 return;
             }
             
-            const formData = {
-                fullname: document.getElementById('fullname').value,
-                email: document.getElementById('email').value,
-                password: password
-            };
+            const email = document.getElementById('email').value;
             
-            // Here you would typically send the signup data to your server
-            console.log('Signup attempt:', formData);
-            
-            // For demo purposes, just show an alert
-            alert('Account created successfully!');
-            window.location.href = 'login.html';
+            try {
+                const response = await fetch('http://localhost:4000/api/user/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: email,
+                        password: password
+                    })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Signup failed');
+                }
+
+                alert('Account created successfully! Please login.');
+                window.location.href = 'login.html';
+            } catch (error) {
+                alert(error.message);
+                console.error('Signup error:', error);
+            }
         });
     </script>
 </body>
-</html> 
+</html>
